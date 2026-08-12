@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "key": "panels",
+      "name": "Solar Panels",
+      "icon": "bolt",
+      "uses": [
+        "Residential",
+        "Commercial",
+        "Institutional"
+      ],
+      "detail": "Panel selection is matched to your roof or ground space, budget and required output as confirmed during design \u2014 not a fixed catalogue. Specific brand names appear here only once Sun Power confirms a sourcing relationship.",
+      "d": "Brand-neutral panel selection matched to your site, budget and available space."
+    },
+    {
+      "key": "inverters",
+      "name": "Hybrid Inverters",
+      "icon": "gear",
+      "uses": [
+        "Residential",
+        "Commercial",
+        "Backup"
+      ],
+      "detail": "Inverter type and capacity are selected to match your load profile and whether battery backup, grid-tie or hybrid operation is required for your site.",
+      "d": "Residential, commercial and larger-system inverter configurations."
+    },
+    {
+      "key": "batteries",
+      "name": "Batteries / Energy Storage",
+      "icon": "battery",
+      "uses": [
+        "Backup",
+        "Residential",
+        "Institutional"
+      ],
+      "detail": "Storage technology and capacity are chosen based on the loads that need to stay powered, your budget and expected battery lifespan for your application.",
+      "d": "Lithium, gel and other appropriate storage technologies."
+    },
+    {
+      "key": "pumps",
+      "name": "Solar Water Pumps",
+      "icon": "droplet",
+      "uses": [
+        "Agriculture",
+        "Boreholes",
+        "Livestock"
+      ],
+      "detail": "Pump type (submersible or surface) is matched to your water source depth, required flow and total dynamic head, confirmed during your site assessment.",
+      "d": "Boreholes, irrigation, livestock and water transfer."
+    },
+    {
+      "key": "heaters",
+      "name": "Solar Water Heaters",
+      "icon": "heat",
+      "uses": [
+        "Residential",
+        "Hospitality",
+        "Institutional"
+      ],
+      "detail": "System type and tank capacity are sized to your daily hot water demand and usage pattern, with integration planned around any existing infrastructure.",
+      "d": "Residential, hospitality and institutional applications."
+    },
+    {
+      "key": "lighting",
+      "name": "Solar Lighting",
+      "icon": "bulb",
+      "uses": [
+        "Security",
+        "Street",
+        "Compound"
+      ],
+      "detail": "Fixture type is selected for the application \u2014 from self-contained all-in-one units to fixtures wired to a shared battery bank \u2014 based on coverage and run-time needs.",
+      "d": "Wall, garden, street, house/security and all-in-one lighting."
+    },
+    {
+      "key": "protection",
+      "name": "Electrical Protection & Control",
+      "icon": "shield",
+      "uses": [
+        "Safety",
+        "Switching",
+        "Compliance"
+      ],
+      "detail": "Protection and control equipment is specified to suit your system design and applicable safety practice. Specific brand names appear only once confirmed by Sun Power.",
+      "d": "Switches, changeover switches, breakers, isolators and protection equipment."
+    },
+    {
+      "key": "mounting",
+      "name": "Mounting & Aluminium Accessories",
+      "icon": "wrench",
+      "uses": [
+        "Roof",
+        "Ground",
+        "Structural"
+      ],
+      "detail": "Mounting structure is specified to your roof type, ground conditions or structural requirement, confirmed as part of the site assessment and design.",
+      "d": "Rails, brackets, roof mounting and structural accessories."
+    }
+  ]
+}

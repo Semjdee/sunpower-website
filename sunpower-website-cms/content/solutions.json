@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "slug": "residential",
+      "name": "Residential Solar",
+      "short": "Solar power designed around your household.",
+      "icon": "home",
+      "problem": "Grid power can be unreliable or costly, and every home has a different roof, orientation and daily energy pattern.",
+      "application": "Homeowners who want dependable power for lighting, appliances, electronics and — where needed — battery backup.",
+      "approach": [
+        "Assess your roof structure, orientation and available space",
+        "Review your appliances and daily/seasonal energy use",
+        "Design a panel layout and inverter configuration for your site",
+        "Size battery storage only where it fits your requirement and budget"
+      ],
+      "equipment": ["panels", "inverters", "batteries", "protection", "mounting"],
+      "faq": [
+        { "q": "How long does a residential installation take?", "a": "Timelines depend on system size and site complexity. We confirm a schedule with you after the site assessment." },
+        { "q": "Do I need to change my roof?", "a": "In most cases no. Our design team checks your roof structure and orientation on-site and specifies any reinforcement needed before installation." },
+        { "q": "Can I add battery backup later?", "a": "Many hybrid inverter systems can be expanded with battery storage later. We can design with future expansion in mind if that matters to you." }
+      ]
+    },
+    {
+      "slug": "commercial",
+      "name": "Commercial Solar",
+      "short": "Systems sized to your business's load and operating hours.",
+      "icon": "building",
+      "problem": "Businesses need power that matches operating hours, equipment loads and cost predictability — without downtime risk.",
+      "application": "Offices, retail, warehouses and light industrial sites looking to manage energy costs and improve power reliability.",
+      "approach": [
+        "Review your load profile, equipment and operating schedule",
+        "Assess roof, ground or carport space for the array",
+        "Design a system architecture matched to your demand curve",
+        "Plan installation around your operating hours to limit disruption"
+      ],
+      "equipment": ["panels", "inverters", "batteries", "protection", "mounting"],
+      "faq": [
+        { "q": "Will installation disrupt our operations?", "a": "We plan installation work around your operating hours where possible and confirm the approach with you before work begins." },
+        { "q": "Can this reduce our exposure to grid outages?", "a": "A correctly designed hybrid or backup system can maintain power to priority loads during outages. We size this based on your assessment." },
+        { "q": "Do you handle ground-mount as well as rooftop?", "a": "Yes — we assess your site and recommend roof, ground or carport mounting based on space, structure and shading." }
+      ]
+    },
+    {
+      "slug": "agriculture",
+      "name": "Agriculture & Irrigation",
+      "short": "Solar water pumping and irrigation for farms.",
+      "icon": "tractor",
+      "problem": "Irrigation and livestock water needs often sit far from grid power, and diesel pumping is costly to run and maintain.",
+      "application": "Farms, boreholes and irrigation schemes needing dependable water pumping without relying on fuel or grid access.",
+      "approach": [
+        "Assess your water source, borehole yield and required flow",
+        "Size the solar array and pump to your water demand",
+        "Plan storage (tank or reservoir) to buffer non-sunlight hours",
+        "Design for your terrain, distances and access for maintenance"
+      ],
+      "equipment": ["pumps", "panels", "protection", "mounting"],
+      "faq": [
+        { "q": "What determines the pump and array size?", "a": "Borehole yield, required flow rate, total dynamic head and your daily water demand — all confirmed during the site assessment." },
+        { "q": "Does this work with an existing borehole?", "a": "In most cases yes. We assess your existing borehole and pump setup to determine what can be reused or needs replacing." },
+        { "q": "Can it also power other equipment on the farm?", "a": "Yes, we can discuss combining irrigation pumping with broader farm power needs during your consultation." }
+      ]
+    },
+    {
+      "slug": "institutional",
+      "name": "Institutional Solar",
+      "short": "Schools, healthcare and hospitality power.",
+      "icon": "school",
+      "problem": "Schools, clinics and hospitality sites need consistent power for critical loads, occupants and equipment, often on a defined budget cycle.",
+      "application": "Schools, healthcare facilities, hospitality properties and other institutions requiring dependable, well-documented systems.",
+      "approach": [
+        "Identify priority loads (medical equipment, refrigeration, lighting, connectivity)",
+        "Assess site constraints and any phased-installation needs",
+        "Design for reliability and, where required, backup continuity",
+        "Document the system for institutional record-keeping and maintenance planning"
+      ],
+      "equipment": ["panels", "inverters", "batteries", "protection", "mounting"],
+      "faq": [
+        { "q": "Can systems be installed in phases?", "a": "Yes, larger institutional projects can often be phased to match budget cycles. We discuss this during design." },
+        { "q": "Do you provide documentation for our records?", "a": "We can provide system documentation appropriate to your project; specific reporting requirements are confirmed during consultation." },
+        { "q": "How do you handle critical loads like medical refrigeration?", "a": "We identify priority loads during the assessment and design backup capacity around them specifically." }
+      ]
+    },
+    {
+      "slug": "water-pumping",
+      "name": "Water Pumping",
+      "short": "Boreholes, livestock and water transfer.",
+      "icon": "droplet",
+      "problem": "Pumping water without grid access or with high fuel costs limits farms, livestock operations and rural sites.",
+      "application": "Boreholes, livestock watering, water transfer and general non-irrigation pumping needs.",
+      "approach": [
+        "Confirm source type, depth and yield",
+        "Match pump technology to head and flow requirements",
+        "Size the solar array to daily pumping needs",
+        "Specify storage to cover variable sunlight hours"
+      ],
+      "equipment": ["pumps", "panels", "protection", "mounting"],
+      "faq": [
+        { "q": "Submersible or surface pump — which do I need?", "a": "This depends on your water source. Boreholes typically use submersible pumps; surface sources may use surface pumps. We confirm on-site." },
+        { "q": "What if my water source has variable yield?", "a": "We factor this into system design and storage sizing so pumping stays within safe extraction limits." }
+      ]
+    },
+    {
+      "slug": "water-heating",
+      "name": "Solar Water Heating",
+      "short": "Residential, hospitality and institutional hot water.",
+      "icon": "heat",
+      "problem": "Electric or gas water heating can be a significant recurring cost, especially for high hot-water-use properties.",
+      "application": "Homes, hospitality properties and institutions with consistent hot water demand.",
+      "approach": [
+        "Assess daily hot water demand and usage pattern",
+        "Recommend a system type suited to your climate and site",
+        "Plan integration with any existing hot water infrastructure",
+        "Design for safe, code-appropriate installation"
+      ],
+      "equipment": ["heaters", "mounting"],
+      "faq": [
+        { "q": "Will this fully replace my current water heater?", "a": "Depending on demand and system size, solar water heating can significantly offset or replace conventional heating. We size this to your actual usage." },
+        { "q": "Does it work well during cloudy periods?", "a": "System design accounts for typical weather patterns at your location; some systems include backup heating elements for low-sun periods." }
+      ]
+    },
+    {
+      "slug": "lighting-security",
+      "name": "Solar Lighting & Security",
+      "short": "Wall, garden, street and security lighting.",
+      "icon": "bulb",
+      "problem": "Perimeter, pathway and street lighting often needs power in areas without convenient grid access or wiring.",
+      "application": "Residential compounds, commercial premises, institutions and public/street lighting projects.",
+      "approach": [
+        "Map lighting locations and required coverage",
+        "Select fixture types suited to the application (wall, garden, street, all-in-one)",
+        "Plan mounting, spacing and cabling or standalone unit placement",
+        "Specify battery capacity for required overnight run-time"
+      ],
+      "equipment": ["lighting", "mounting"],
+      "faq": [
+        { "q": "Do these lights need separate wiring to a power source?", "a": "Many solar lighting units are self-contained (panel, battery and light in one fixture), reducing or eliminating the need for wiring runs." },
+        { "q": "How long do they run at night?", "a": "Run-time depends on battery capacity and daily sunlight — we specify this based on your required coverage hours." }
+      ]
+    },
+    {
+      "slug": "backup-hybrid",
+      "name": "Backup & Hybrid Energy",
+      "short": "Keep essential loads running through outages.",
+      "icon": "battery",
+      "problem": "Grid outages can interrupt essential loads — refrigeration, lighting, connectivity, medical or business equipment.",
+      "application": "Any property that needs power continuity through outages, whether solar-connected or as backup to existing supply.",
+      "approach": [
+        "Identify the loads that must stay powered during an outage",
+        "Size battery storage and inverter capacity to those loads",
+        "Design switchover behaviour appropriate to your site",
+        "Integrate with new or existing solar arrays where applicable"
+      ],
+      "equipment": ["inverters", "batteries", "protection"],
+      "faq": [
+        { "q": "Can this integrate with my existing solar system?", "a": "In many cases yes — we assess your existing setup during consultation to confirm compatibility." },
+        { "q": "How long can backup power last?", "a": "This depends on battery capacity versus your priority load — sized specifically during design, not a fixed figure across all sites." }
+      ]
+    }
+  ]
+}

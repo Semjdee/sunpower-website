@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "name": "Solar Consultation & Energy Assessment",
+      "icon": "headset",
+      "bullets": [
+        "Understand your energy goals and constraints",
+        "Review existing power setup, if any",
+        "Outline suitable solution directions",
+        "No-obligation next steps toward a site assessment"
+      ],
+      "d": "A conversation about your property, energy needs, application and budget \u2014 the starting point for every project."
+    },
+    {
+      "name": "Site Survey",
+      "icon": "compass",
+      "bullets": [
+        "Roof/ground structural and orientation check",
+        "Load or water-yield assessment as relevant",
+        "Site constraints, access and shading review",
+        "Findings feed directly into system design"
+      ],
+      "d": "An on-site assessment of your roof, ground, water source or facility to confirm what a design can actually work with."
+    },
+    {
+      "name": "Solar System Design & Site Layout",
+      "icon": "design",
+      "bullets": [
+        "Array layout matched to your roof or ground plan",
+        "Inverter and storage configuration",
+        "Equipment specification sized to your requirement",
+        "Design reviewed with you before sourcing begins"
+      ],
+      "d": "A layout and system architecture designed specifically for your site \u2014 not a generic package."
+    },
+    {
+      "name": "Equipment Sourcing",
+      "icon": "search",
+      "bullets": [
+        "Equipment matched to your approved design",
+        "Sourced to suit your budget and requirement",
+        "Technical suitability checked before order",
+        "Brand relationships confirmed on a per-project basis"
+      ],
+      "d": "We source suitable equipment for your design, matched to application, budget and availability."
+    },
+    {
+      "name": "Professional Installation & Commissioning",
+      "icon": "truck",
+      "bullets": [
+        "Installation scheduled around your site needs",
+        "System commissioning and function checks",
+        "Site handover and orientation",
+        "Documentation appropriate to your project"
+      ],
+      "d": "Installation and commissioning carried out by our technical team, to the design specification."
+    },
+    {
+      "name": "Maintenance, Support & Troubleshooting",
+      "icon": "wrench",
+      "bullets": [
+        "Fault diagnosis and troubleshooting",
+        "Routine maintenance visits",
+        "Support requests via WhatsApp or phone",
+        "Guidance on system care between visits"
+      ],
+      "d": "Ongoing support to keep your system performing as designed."
+    },
+    {
+      "name": "System Upgrades & Optimisation",
+      "icon": "upgrade",
+      "bullets": [
+        "Assess current system against new requirements",
+        "Battery, inverter or array expansion design",
+        "Sourcing and installation of upgrade components",
+        "Advice on sequencing upgrades to your budget"
+      ],
+      "d": "As your needs, budget or property change, we assess and design system upgrades."
+    }
+  ]
+}

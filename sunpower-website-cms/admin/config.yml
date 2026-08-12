@@ -1,0 +1,136 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored in the repo, and the URL path used to reference them
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Shows edits in context before publishing (optional, safe to leave on)
+publish_mode: simple
+
+collections:
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Global Settings"
+        name: "site"
+        fields:
+          - { label: "WhatsApp Number (digits only, country code first, no + or spaces)", name: "whatsappNumber", widget: "string" }
+          - { label: "Phone (as displayed on site)", name: "phoneDisplay", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
+          - { label: "Hero Subheading", name: "heroSub", widget: "text" }
+          - label: "Why Sun Power — Cards"
+            name: "whyCards"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["design", "search", "truck", "headset", "shield", "bolt", "wrench", "gear", "battery"]
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Brand Partners"
+            name: "brands"
+            widget: "list"
+            required: false
+            hint: "Leave empty until Sun Power confirms real brand relationships — the site shows a 'pending confirmation' placeholder when this is empty."
+            fields:
+              - { label: "Brand Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image", required: false }
+
+  - name: "solutions"
+    label: "Solutions"
+    files:
+      - file: "content/solutions.json"
+        label: "Solutions"
+        name: "solutions"
+        fields:
+          - name: "items"
+            label: "Solution Pages"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "URL Slug", name: "slug", widget: "string", hint: "Used in the page link — avoid changing this on an existing solution, it will break links pointing to it." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Short Description", name: "short", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["home", "building", "tractor", "school", "droplet", "heat", "bulb", "battery", "shield", "wrench"]
+              - { label: "The Challenge", name: "problem", widget: "text" }
+              - { label: "Where This Applies", name: "application", widget: "text" }
+              - { label: "How Sun Power Designs This (steps)", name: "approach", widget: "list" }
+              - label: "Typical Equipment Categories"
+                name: "equipment"
+                widget: "list"
+                hint: "Use equipment keys: panels, inverters, batteries, pumps, heaters, lighting, protection, mounting"
+              - label: "Frequently Asked Questions"
+                name: "faq"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - file: "content/services.json"
+        label: "Services"
+        name: "services"
+        fields:
+          - name: "items"
+            label: "Services"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["headset", "compass", "design", "search", "truck", "wrench", "upgrade"]
+              - { label: "Description", name: "d", widget: "text" }
+              - { label: "What's Included (bullets)", name: "bullets", widget: "list" }
+
+  - name: "equipment"
+    label: "Equipment"
+    files:
+      - file: "content/equipment.json"
+        label: "Equipment Categories"
+        name: "equipment"
+        fields:
+          - name: "items"
+            label: "Equipment Categories"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Category Key", name: "key", widget: "string", hint: "Internal ID used for links — avoid changing this on an existing category." }
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["bolt", "gear", "battery", "droplet", "heat", "bulb", "shield", "wrench"]
+              - { label: "Description", name: "d", widget: "text" }
+              - { label: "Use Cases (tags)", name: "uses", widget: "list" }
+              - { label: "Detail (shown when 'Explore' is clicked)", name: "detail", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - file: "content/projects.json"
+        label: "Projects"
+        name: "projects"
+        fields:
+          - name: "items"
+            label: "Projects"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string", hint: "e.g. Residential, Commercial, Agriculture, Institutional" }
+              - { label: "Photo", name: "image", widget: "image", required: false, hint: "Leave blank to show the placeholder card until a real photo is ready." }
+              - { label: "Description", name: "description", widget: "text" }

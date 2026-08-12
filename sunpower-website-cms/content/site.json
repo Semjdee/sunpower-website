@@ -1,0 +1,15 @@
+{
+  "whatsappNumber": "000000000000",
+  "phoneDisplay": "+xxx xxx xxx xxx",
+  "email": "info@sunpower.example",
+  "address": "Address to be supplied by Sun Power",
+  "heroHeadline": "Power Designed Around You.",
+  "heroSub": "Professionally designed solar and energy systems for homes, businesses, farms and institutions — consulted, assessed, designed, sourced, installed and supported end to end.",
+  "whyCards": [
+    { "title": "Expert Design", "icon": "design", "description": "Every system starts with a design built around your actual site and requirement — not a generic package." },
+    { "title": "Suitable Equipment Selection", "icon": "search", "description": "We source equipment matched to your design, application and budget, not whatever is easiest to sell." },
+    { "title": "Professional Installation", "icon": "truck", "description": "Installation and commissioning carried out by our technical team to the approved design specification." },
+    { "title": "Reliable Support", "icon": "headset", "description": "Maintenance, troubleshooting and upgrade support after installation — not a one-time transaction." }
+  ],
+  "brands": []
+}

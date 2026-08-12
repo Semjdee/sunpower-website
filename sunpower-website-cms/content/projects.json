@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "Rooftop residential system",
+      "category": "Residential",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    },
+    {
+      "title": "Commercial roof-mount array",
+      "category": "Commercial",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    },
+    {
+      "title": "Borehole solar pumping",
+      "category": "Agriculture",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    },
+    {
+      "title": "School backup power system",
+      "category": "Institutional",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    },
+    {
+      "title": "Hospitality water heating",
+      "category": "Water Heating",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    },
+    {
+      "title": "Compound security lighting",
+      "category": "Lighting",
+      "image": "",
+      "description": "Awaiting Sun Power project photography and details."
+    }
+  ]
+}
