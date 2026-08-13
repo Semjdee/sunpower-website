@@ -720,7 +720,11 @@ function wrapPage(opts){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${opts.title}</title>
 <meta name="description" content="${opts.description}">
-<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${opts.title}">
 <meta property="og:description" content="${opts.description}">
@@ -1267,6 +1271,7 @@ function copyDir(src, dest){
 copyDir(path.join(ROOT, 'admin'), path.join(DIST, 'admin'));
 copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
 fs.copyFileSync(path.join(ROOT, 'app.js'), path.join(DIST, 'app.js'));
+fs.copyFileSync(path.join(ROOT, 'images', 'favicon.ico'), path.join(DIST, 'favicon.ico'));
 
 console.log('Build complete.');
 console.log('Pages generated:', generatedPaths.length);
