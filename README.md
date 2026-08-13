@@ -1,4 +1,4 @@
-# Sun Power Website — CMS-Enabled, SEO-Ready Static Build
+# RayGrid Website — CMS-Enabled, SEO-Ready Static Build
 
 This site is generated from editable content files under `/content/` into
 real, independent, pre-rendered HTML pages — one per URL — by `build.js`.

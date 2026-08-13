@@ -1,5 +1,5 @@
 /* ============================================================
-   SUN POWER — CLIENT-SIDE INTERACTIVITY
+   RAYGRID — CLIENT-SIDE INTERACTIVITY
    Content is already rendered server-side for SEO. This file only
    adds interactive behavior: menu, accordions, funnel, WhatsApp links.
    window.CONFIG is set inline on each page before this file loads.
@@ -74,13 +74,13 @@ function initFunnel(){
       ["Bill file", FUNNEL_STATE.fileName || "None selected"]
     ];
     box.innerHTML = rows.map(function(r){return '<div class="summary-row"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>';}).join('');
-    const msg = "Hi Sun Power, I'd like a solar consultation.\n\n" +
+    const msg = "Hi RayGrid, I'd like a solar consultation.\n\n" +
       "What I need solar for: " + (FUNNEL_STATE.need || "Not specified") + "\n" +
       "What I want to power: " + (FUNNEL_STATE.powering.length ? FUNNEL_STATE.powering.join(", ") : "Not specified") + "\n" +
       "Location: " + (FUNNEL_STATE.location || "Not specified") + "\n" +
       "Monthly bill / energy challenge: " + (FUNNEL_STATE.bill || "Not specified") +
       (FUNNEL_STATE.fileName ? ("\n(I have an electricity bill file to share: " + FUNNEL_STATE.fileName + ")") : "") +
-      "\n\n— Sent via the Sun Power website";
+      "\n\n— Sent via the RayGrid website";
     document.getElementById('funnelWaBtn').href = waLink(msg);
   }
   showStep(1);
@@ -89,9 +89,9 @@ function initFunnel(){
 /* ---------- Page init ---------- */
 function initPage(){
   setWaLinks();
-  document.getElementById('headerWaBtn').href = waLink("Hi Sun Power, I would like to start a WhatsApp consultation.");
-  document.getElementById('footerWaBtn').href = waLink("Hi Sun Power, I would like to start a WhatsApp consultation.");
-  document.getElementById('floatWaBtn').href = waLink("Hi Sun Power, I would like to start a WhatsApp consultation.");
+  document.getElementById('headerWaBtn').href = waLink("Hi RayGrid, I would like to start a WhatsApp consultation.");
+  document.getElementById('footerWaBtn').href = waLink("Hi RayGrid, I would like to start a WhatsApp consultation.");
+  document.getElementById('floatWaBtn').href = waLink("Hi RayGrid, I would like to start a WhatsApp consultation.");
 
   document.querySelectorAll('[data-faq-toggle]').forEach(function(btn){
     btn.addEventListener('click', function(){

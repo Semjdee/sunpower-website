@@ -1,15 +1,15 @@
 {
   "whatsappNumber": "256779109266",
   "phoneDisplay": "+256779109266",
-  "email": "info@sunpower.example",
+  "email": "info@raygridsolar.example",
   "address": "kampala Mukono 3455 Mega Complex building level 3",
   "heroHeadline": "Power Designed Around You.",
-  "heroSub": "Professionally designed solar and energy systems for homes, businesses, farms and institutions — consulted, assessed, designed, sourced, installed and supported end to end.",
+  "heroSub": "Professionally designed solar and energy systems for homes, businesses, farms and institutions \u2014 consulted, assessed, designed, sourced, installed and supported end to end.",
   "whyCards": [
     {
       "title": "Expert Design",
       "icon": "design",
-      "description": "Every system starts with a design built around your actual site and requirement — not a generic package."
+      "description": "Every system starts with a design built around your actual site and requirement \u2014 not a generic package."
     },
     {
       "title": "Suitable Equipment Selection",
@@ -24,7 +24,7 @@
     {
       "title": "Reliable Support",
       "icon": "headset",
-      "description": "Maintenance, troubleshooting and upgrade support after installation — not a one-time transaction."
+      "description": "Maintenance, troubleshooting and upgrade support after installation \u2014 not a one-time transaction."
     }
   ],
   "brands": [

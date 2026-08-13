@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   SUN POWER — STATIC SITE BUILD
+   RAYGRID — STATIC SITE BUILD
    Reads editable content from content/*.json and generates real,
    independent, pre-rendered HTML pages (one per route) into dist/.
    Run automatically by Netlify on every deploy via netlify.toml.
@@ -28,7 +28,7 @@ const CONFIG = Object.assign({
   whatsappNumber: "000000000000",
   phoneDisplay: "+xxx xxx xxx xxx",
   email: "info@sunpower.example",
-  address: "Address to be supplied by Sun Power",
+  address: "Address to be supplied by RayGrid",
   heroHeadline: "Power Designed Around You.",
   heroSub: "Professionally designed solar and energy systems for homes, businesses, farms and institutions.",
   whyCards: [],
@@ -139,7 +139,7 @@ function pageHome(){
         '<h1>' + CONFIG.heroHeadline + '</h1>' +
         '<p class="lead">' + CONFIG.heroSub + '</p>' +
         '<div class="hero-ctas">' +
-          '<a class="btn btn-wa" data-wa="Hi Sun Power, I would like to start a WhatsApp consultation." target="_blank" rel="noopener">'+icon('phone')+' Start WhatsApp Consultation</a>' +
+          '<a class="btn btn-wa" data-wa="Hi RayGrid, I would like to start a WhatsApp consultation." target="_blank" rel="noopener">'+icon('phone')+' Start WhatsApp Consultation</a>' +
           '<a class="btn btn-outline on-navy" href="/solutions/">Explore Solutions '+icon('arrow')+'</a>' +
         '</div>' +
         '<div class="op-line"><b>DESIGN</b><span class="dot"></span><b>INSTALL</b><span class="dot"></span><b>SUPPORT</b></div>' +
@@ -211,7 +211,7 @@ function pageHome(){
     '<div class="container">' +
       '<div class="section-head reveal">' +
         '<div class="eyebrow on-dark">Our Process</div>' +
-        '<h2>How Sun Power works</h2>' +
+        '<h2>How RayGrid works</h2>' +
         '<p>A defined sequence, followed for every project regardless of size.</p>' +
       '</div>' +
       processRailHTML() +
@@ -245,7 +245,7 @@ function pageHome(){
       '</div>' +
       '<div class="grid grid-4 reveal">' + brandTilesHTML() + '</div>' +
       '<div class="notice reveal" style="margin-top:18px;">' + icon('shield') +
-        '<span>We source and work with reputable manufacturers matched to each project\'s requirements. Confirmed brand names and any verified partnerships will be added here by Sun Power.</span>' +
+        '<span>We source and work with reputable manufacturers matched to each project\'s requirements. Confirmed brand names and any verified partnerships will be added here by RayGrid.</span>' +
       '</div>' +
     '</div>' +
   '</section>' +
@@ -265,7 +265,7 @@ function pageHome(){
   '<section class="section on-off">' +
     '<div class="container">' +
       '<div class="section-head reveal">' +
-        '<div class="eyebrow">Why Sun Power</div>' +
+        '<div class="eyebrow">Why RayGrid</div>' +
         '<h2>Built on design, not guesswork</h2>' +
       '</div>' +
       '<div class="grid grid-4">' + CONFIG.whyCards.map(function(w){
@@ -279,7 +279,7 @@ function pageHome(){
       '<div class="section-head reveal">' +
         '<div class="eyebrow">Learn</div>' +
         '<h2>Solar knowledge</h2>' +
-        '<p>Practical explainers, FAQs and video content — added as Sun Power publishes them.</p>' +
+        '<p>Practical explainers, FAQs and video content — added as RayGrid publishes them.</p>' +
       '</div>' +
       '<div class="grid grid-3">' +
         knowledgeTile("Video", "How solar sizing actually works") +
@@ -288,7 +288,7 @@ function pageHome(){
       '</div>' +
       '<div class="stack reveal" style="margin-top:40px;max-width:760px;">' +
         faqHTML([
-          {q:"Do you offer financing?", a:"Financing options depend on the provider relationships Sun Power confirms — ask your consultant for current options."},
+          {q:"Do you offer financing?", a:"Financing options depend on the provider relationships RayGrid confirms — ask your consultant for current options."},
           {q:"How is my system size determined?", a:"Through your site assessment: your loads or water demand, available space, and budget together determine the recommended system size."},
           {q:"Do you work outside your immediate area?", a:"Reach out with your location during consultation and we will confirm whether your site is within our service area."}
         ]) +
@@ -303,7 +303,7 @@ function pageHome(){
       '<div class="chip-row" style="justify-content:center;margin-top:26px;">' +
         AUDIENCES.map(function(a){return '<a class="chip" style="background:transparent;border-color:#3A4A63;color:#fff;" href="/solutions/'+a.slug+'/">'+a.label+'</a>';}).join('') +
       '</div>' +
-      '<div style="margin-top:28px;"><a class="btn btn-wa" data-wa="Hi Sun Power, I would like to design a solar solution for my property." target="_blank" rel="noopener">'+icon('phone')+' Start WhatsApp Consultation</a></div>' +
+      '<div style="margin-top:28px;"><a class="btn btn-wa" data-wa="Hi RayGrid, I would like to design a solar solution for my property." target="_blank" rel="noopener">'+icon('phone')+' Start WhatsApp Consultation</a></div>' +
     '</div>' +
   '</section>';
 }
@@ -394,7 +394,7 @@ function pageSolutionDetail(slug){
       '<div>' +
         '<div class="reveal"><div class="eyebrow">The Challenge</div><p style="margin-top:12px;font-size:1.05rem;color:var(--ink);">'+s.problem+'</p></div>' +
         '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">Where This Applies</div><p style="margin-top:12px;color:var(--muted);">'+s.application+'</p></div>' +
-        '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">How Sun Power Designs This</div>' +
+        '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">How RayGrid Designs This</div>' +
           '<ul class="check-list" style="margin-top:14px;">' + s.approach.map(function(a){return '<li>'+icon('check')+'<span>'+a+'</span></li>';}).join('') + '</ul>' +
         '</div>' +
         '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">Typical Equipment Categories</div>' +
@@ -403,7 +403,7 @@ function pageSolutionDetail(slug){
         '<div class="reveal" style="margin-top:40px;"><div class="eyebrow">Our Process</div><div style="margin-top:16px;background:var(--navy);border-radius:var(--radius-lg);padding:28px;">'+processRailHTML()+'</div></div>' +
         '<div class="reveal" style="margin-top:40px;"><div class="eyebrow">Frequently Asked</div><div style="margin-top:10px;">'+faqHTML(s.faq)+'</div></div>' +
       '</div>' +
-      '<div>' + ctaBlock("Ready to design your "+s.name.toLowerCase()+"?", "Start a short consultation and we will follow up with next steps for a site assessment.", "Hi Sun Power, I am interested in "+s.name+". Could you tell me more?") + '</div>' +
+      '<div>' + ctaBlock("Ready to design your "+s.name.toLowerCase()+"?", "Start a short consultation and we will follow up with next steps for a site assessment.", "Hi RayGrid, I am interested in "+s.name+". Could you tell me more?") + '</div>' +
     '</div>' +
   '</section>';
 }
@@ -412,7 +412,7 @@ function pageSolutionDetail(slug){
    PAGE: SERVICES
    ============================================================ */
 function pageServices(){
-  return pageHeroBlock("wrench","Services", "Consultation to long-term support", "Sun Power's service lifecycle covers every stage of a project — from first conversation to ongoing maintenance.", [["Home","/"],["Services",null]]) +
+  return pageHeroBlock("wrench","Services", "Consultation to long-term support", "RayGrid's service lifecycle covers every stage of a project — from first conversation to ongoing maintenance.", [["Home","/"],["Services",null]]) +
   '<section class="section">' +
     '<div class="container">' +
       '<div class="stack" style="gap:20px;">' + SERVICES.map(function(sv,i){
@@ -421,7 +421,7 @@ function pageServices(){
           '<div><h3>'+sv.name+'</h3><p>'+sv.d+'</p>' +
             '<ul style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;">' + sv.bullets.map(function(b){return '<li class="tag">'+b+'</li>';}).join('') + '</ul>' +
           '</div>' +
-          '<a class="btn btn-ghost btn-sm" data-wa="Hi Sun Power, I would like to ask about: '+sv.name+'." target="_blank" rel="noopener">Ask an Expert</a>' +
+          '<a class="btn btn-ghost btn-sm" data-wa="Hi RayGrid, I would like to ask about: '+sv.name+'." target="_blank" rel="noopener">Ask an Expert</a>' +
         '</div>';
       }).join('') + '</div>' +
     '</div>' +
@@ -450,7 +450,7 @@ function pageEquipment(){
           '<div class="equip-detail" data-eq-detail><div class="equip-detail-inner">'+e.detail+'</div></div>' +
           '<div class="actions">' +
             '<button class="btn btn-outline btn-sm" data-eq-toggle>Explore</button>' +
-            '<a class="btn btn-ghost btn-sm" data-wa="Hi Sun Power, I would like to ask an expert about: '+e.name+'." target="_blank" rel="noopener">Ask an Expert</a>' +
+            '<a class="btn btn-ghost btn-sm" data-wa="Hi RayGrid, I would like to ask an expert about: '+e.name+'." target="_blank" rel="noopener">Ask an Expert</a>' +
           '</div>' +
         '</div>';
       }).join('') + '</div>' +
@@ -469,11 +469,11 @@ function pageEquipment(){
    PAGE: PROJECTS
    ============================================================ */
 function pageProjects(){
-  return pageHeroBlock("eye","Projects", "Completed work — coming soon", "This gallery will show Sun Power's completed installations once photography and project details are supplied.", [["Home","/"],["Projects",null]]) +
+  return pageHeroBlock("eye","Projects", "Completed work — coming soon", "This gallery will show RayGrid's completed installations once photography and project details are supplied.", [["Home","/"],["Projects",null]]) +
   '<section class="section">' +
     '<div class="container">' +
       '<div class="notice reveal" style="margin-bottom:32px;">' + icon('shield') +
-        '<span>The project cards below are placeholders showing how completed work will be presented. No imagery here represents a real Sun Power project.</span>' +
+        '<span>The project cards below are placeholders showing how completed work will be presented. No imagery here represents a real RayGrid project.</span>' +
       '</div>' +
       '<div class="grid grid-3">' + PROJECTS.map(projectCard).join('') + '</div>' +
     '</div>' +
@@ -490,12 +490,12 @@ function pageProjects(){
    PAGE: ABOUT
    ============================================================ */
 function pageAbout(){
-  return pageHeroBlock("compass","About Sun Power", "Design. Install. Support.", "Sun Power is a solar and energy solutions company — a consultant, designer, installer and equipment expert, not a retail shop.", [["Home","/"],["About",null]]) +
+  return pageHeroBlock("compass","About RayGrid", "Design. Install. Support.", "RayGrid is a solar and energy solutions company — a consultant, designer, installer and equipment expert, not a retail shop.", [["Home","/"],["About",null]]) +
   '<section class="section">' +
     '<div class="container two-col">' +
       '<div>' +
         '<div class="reveal"><div class="eyebrow">Who We Are</div>' +
-          '<p style="margin-top:14px;font-size:1.05rem;">Sun Power designs solar and energy systems around the customer\'s property, energy requirement, application and budget. We work across residential, commercial, agriculture, institutional, healthcare and hospitality projects, following the same consult-to-support process on every job.</p>' +
+          '<p style="margin-top:14px;font-size:1.05rem;">RayGrid designs solar and energy systems around the customer\'s property, energy requirement, application and budget. We work across residential, commercial, agriculture, institutional, healthcare and hospitality projects, following the same consult-to-support process on every job.</p>' +
         '</div>' +
         '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">Our Service Promise</div><div style="margin-top:16px;">'+processRailOnLight()+'</div></div>' +
         '<div class="reveal" style="margin-top:36px;"><div class="eyebrow">Our Technical Approach</div>' +
@@ -514,9 +514,9 @@ function pageAbout(){
             valueCard("Long-Term Support","We stay engaged after installation, not just through the sale.") +
           '</div>' +
         '</div>' +
-        '<div class="notice reveal" style="margin-top:36px;">'+icon('shield')+'<span>Team photographs and a people-led profile will be added once Sun Power supplies them.</span></div>' +
+        '<div class="notice reveal" style="margin-top:36px;">'+icon('shield')+'<span>Team photographs and a people-led profile will be added once RayGrid supplies them.</span></div>' +
       '</div>' +
-      '<div>' + ctaBlock("Have a project in mind?", "Tell us about your property and energy needs — we will guide you to the right next step.", "Hi Sun Power, I would like to learn more about your company and process.") + '</div>' +
+      '<div>' + ctaBlock("Have a project in mind?", "Tell us about your property and energy needs — we will guide you to the right next step.", "Hi RayGrid, I would like to learn more about your company and process.") + '</div>' +
     '</div>' +
   '</section>';
 }
@@ -638,7 +638,7 @@ function pageConsultation(){
    SHARED HEADER / FOOTER (build-time, with active-nav baked in)
    ============================================================ */
 function renderHeader(activePath){
-  let html = "<header class=\"site\">\n  <div class=\"container header-inner\">\n    <a href=\"/\" class=\"brand\" aria-label=\"Sun Power home\">\n      <svg class=\"brand-mark\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sun Power emblem\">\n        <circle cx=\"20\" cy=\"20\" r=\"19\" fill=\"#0B1420\"/>\n        <path d=\"M20 6 A14 14 0 0 1 34 20 H6 A14 14 0 0 1 20 6 Z\" fill=\"#F5A623\"/>\n        <g stroke=\"#0B1420\" stroke-width=\"0.9\">\n          <line x1=\"9\" y1=\"20\" x2=\"31\" y2=\"20\"/>\n          <line x1=\"9\" y1=\"24.5\" x2=\"31\" y2=\"24.5\"/>\n          <line x1=\"9\" y1=\"29\" x2=\"31\" y2=\"29\"/>\n          <line x1=\"14.3\" y1=\"20\" x2=\"14.3\" y2=\"32\"/>\n          <line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"33.2\"/>\n          <line x1=\"25.7\" y1=\"20\" x2=\"25.7\" y2=\"32\"/>\n        </g>\n        <path d=\"M9 20 A11 11 0 0 0 20 33.2 A11 11 0 0 0 31 20 Z\" fill=\"#123A66\" opacity=\"0.92\"/>\n      </svg>\n      <span>\n        <span class=\"brand-word\"><span class=\"sun\">SUN</span> <span class=\"power\">POWER</span></span>\n        <span class=\"brand-sub\">Solar &amp; Energy Solutions</span>\n      </span>\n    </a>\n\n    <nav class=\"primary\" id=\"primaryNav\" aria-label=\"Primary\">\n      <a href=\"/\" data-path=\"/\">Home</a>\n      <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n      <a href=\"/services/\" data-path=\"/services\">Services</a>\n      <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n      <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n      <a href=\"/about/\" data-path=\"/about\">About</a>\n      <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n    </nav>\n\n    <div class=\"header-actions\">\n      <a class=\"btn btn-outline btn-sm\" href=\"/consultation/\">Request Assessment</a>\n      <a class=\"btn btn-wa btn-sm\" id=\"headerWaBtn\" target=\"_blank\" rel=\"noopener\">\n        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n        WhatsApp Us\n      </a>\n      <button class=\"menu-toggle\" id=\"menuToggle\" aria-label=\"Toggle menu\" aria-expanded=\"false\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M3 6h18M3 12h18M3 18h18\"/></svg>\n      </button>\n    </div>\n  </div>\n  <div class=\"mobile-menu\" id=\"mobileMenu\">\n    <a href=\"/\" data-path=\"/\">Home</a>\n    <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n    <a href=\"/services/\" data-path=\"/services\">Services</a>\n    <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n    <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n    <a href=\"/about/\" data-path=\"/about\">About</a>\n    <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n  </div>\n</header>";
+  let html = "<header class=\"site\">\n  <div class=\"container header-inner\">\n    <a href=\"/\" class=\"brand\" aria-label=\"RayGrid home\">\n      <img class=\"brand-mark\" src=\"/images/raygrid-emblem.png\" alt=\"RayGrid emblem\" width=\"34\" height=\"34\">\n      <span>\n        <span class=\"brand-word\"><span class=\"sun\">RAY</span> <span class=\"power\">GRID</span></span>\n        <span class=\"brand-sub\">Solar &amp; Energy Solutions</span>\n      </span>\n    </a>\n\n    <nav class=\"primary\" id=\"primaryNav\" aria-label=\"Primary\">\n      <a href=\"/\" data-path=\"/\">Home</a>\n      <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n      <a href=\"/services/\" data-path=\"/services\">Services</a>\n      <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n      <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n      <a href=\"/about/\" data-path=\"/about\">About</a>\n      <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n    </nav>\n\n    <div class=\"header-actions\">\n      <a class=\"btn btn-outline btn-sm\" href=\"/consultation/\">Request Assessment</a>\n      <a class=\"btn btn-wa btn-sm\" id=\"headerWaBtn\" target=\"_blank\" rel=\"noopener\">\n        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n        WhatsApp Us\n      </a>\n      <button class=\"menu-toggle\" id=\"menuToggle\" aria-label=\"Toggle menu\" aria-expanded=\"false\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M3 6h18M3 12h18M3 18h18\"/></svg>\n      </button>\n    </div>\n  </div>\n  <div class=\"mobile-menu\" id=\"mobileMenu\">\n    <a href=\"/\" data-path=\"/\">Home</a>\n    <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n    <a href=\"/services/\" data-path=\"/services\">Services</a>\n    <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n    <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n    <a href=\"/about/\" data-path=\"/about\">About</a>\n    <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n  </div>\n</header>";
   const navPaths = ["/", "/solutions/", "/services/", "/equipment/", "/projects/", "/about/", "/consultation/"];
   navPaths.forEach(function(p){
     const isActive = (p === "/") ? (activePath === "/") : activePath.indexOf(p) === 0;
@@ -651,7 +651,7 @@ function renderHeader(activePath){
 }
 
 function renderFooter(){
-  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">SUN</span> <span class=\"power\">POWER</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by Sun Power</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 Sun Power Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
+  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">RAY</span> <span class=\"power\">GRID</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by RayGrid</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 RayGrid Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
   const solutionLinks = SOLUTIONS.slice(0,6).map(function(s){
     return '<li><a href="/solutions/'+s.slug+'/">'+s.name+'</a></li>';
   }).join('') + '<li><a href="/solutions/">All Solutions</a></li>';
@@ -660,7 +660,7 @@ function renderFooter(){
     '<em id="footerPhone" style="color:#6B7A93;font-style:normal;">'+CONFIG.phoneDisplay+'</em>');
   html = html.replace('<em id="footerEmail" style="color:#6B7A93;font-style:normal;">info@sunpower.example</em>',
     '<em id="footerEmail" style="color:#6B7A93;font-style:normal;">'+CONFIG.email+'</em>');
-  html = html.replace('<span id="footerAddress">Address to be supplied by Sun Power</span>',
+  html = html.replace('<span id="footerAddress">Address to be supplied by RayGrid</span>',
     '<span id="footerAddress">'+CONFIG.address+'</span>');
   return html;
 }
@@ -674,7 +674,7 @@ function localBusinessSchema(){
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Sun Power",
+    "name": "RayGrid Solar Energy",
     "description": "Solar and energy solutions provider — consultation, site assessment, design, sourcing, installation and support.",
     "url": SITE_URL,
     "telephone": CONFIG.phoneDisplay,
@@ -720,6 +720,7 @@ function wrapPage(opts){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${opts.title}</title>
 <meta name="description" content="${opts.description}">
+<link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${opts.title}">
 <meta property="og:description" content="${opts.description}">
@@ -732,13 +733,13 @@ ${jsonLdBlocks}
 <style>
 
 /* ============================================================
-   SUN POWER — DESIGN TOKENS
+   RAYGRID — DESIGN TOKENS
    Palette: white-dominant UI, deep navy authority, solar yellow
    primary accent, solar blue technical/schematic accent.
    WhatsApp green reserved strictly for WhatsApp CTAs.
    Signature visual language: site-survey / blueprint schematics
    (corner registration marks, dashed grid, mono spec labels) —
-   standing in for photography until Sun Power supplies real
+   standing in for photography until RayGrid supplies real
    project imagery.
    ============================================================ */
 :root{
@@ -1183,50 +1184,50 @@ function writePage(routePath, title, description, bodyHtml, extraSchema){
    ============================================================ */
 const generatedPaths = [];
 
-generatedPaths.push(writePage('/', 'Sun Power | Solar & Energy Solutions — Power Designed Around You',
-  "Sun Power designs, sources, installs and supports solar and energy systems for homes, businesses, farms and institutions. Power designed around your property, energy needs and budget.",
+generatedPaths.push(writePage('/', 'RayGrid | Solar & Energy Solutions — Power Designed Around You',
+  "RayGrid designs, sources, installs and supports solar and energy systems for homes, businesses, farms and institutions. Power designed around your property, energy needs and budget.",
   pageHome()));
 
-generatedPaths.push(writePage('/solutions/', 'Solar & Energy Solutions by Application | Sun Power',
-  "Explore Sun Power's solar and energy solutions by application — residential, commercial, agriculture, institutional, water pumping, water heating, lighting and backup power.",
+generatedPaths.push(writePage('/solutions/', 'Solar & Energy Solutions by Application | RayGrid',
+  "Explore RayGrid's solar and energy solutions by application — residential, commercial, agriculture, institutional, water pumping, water heating, lighting and backup power.",
   pageSolutions()));
 
 const SOLUTION_META = {
-  "residential": ["Residential Solar Power Systems | Sun Power", "Residential solar systems designed around your roof, energy use and budget. Site assessment, design, sourcing, installation and support from Sun Power."],
-  "commercial": ["Commercial Solar Power Systems | Sun Power", "Commercial solar systems sized to your business's load and operating hours. Reduce energy costs and improve power reliability with Sun Power."],
-  "agriculture": ["Solar Water Pumping & Irrigation for Farms | Sun Power", "Solar water pumping and irrigation systems for farms and boreholes. Reliable water access without diesel costs, designed and installed by Sun Power."],
-  "institutional": ["Solar Power for Schools & Institutions | Sun Power", "Dependable solar power for schools, healthcare facilities and hospitality properties. Priority-load backup and phased installation options from Sun Power."],
-  "water-pumping": ["Solar Water Pumps for Boreholes & Livestock | Sun Power", "Solar water pumps for boreholes, livestock and water transfer, sized to your source yield and daily demand by Sun Power's design team."],
-  "water-heating": ["Solar Water Heating Systems | Sun Power", "Solar water heating systems for homes, hospitality and institutions. Reduce water heating costs with a system sized to your actual demand."],
-  "lighting-security": ["Solar Lighting & Security Systems | Sun Power", "Solar wall, garden, street and security lighting for compounds and public spaces. Self-contained, reliable lighting from Sun Power."],
-  "backup-hybrid": ["Backup & Hybrid Solar Energy Systems | Sun Power", "Backup and hybrid solar energy systems that keep essential loads running through grid outages. Battery and inverter sizing from Sun Power."]
+  "residential": ["Residential Solar Power Systems | RayGrid", "Residential solar systems designed around your roof, energy use and budget. Site assessment, design, sourcing, installation and support from RayGrid."],
+  "commercial": ["Commercial Solar Power Systems | RayGrid", "Commercial solar systems sized to your business's load and operating hours. Reduce energy costs and improve power reliability with RayGrid."],
+  "agriculture": ["Solar Water Pumping & Irrigation for Farms | RayGrid", "Solar water pumping and irrigation systems for farms and boreholes. Reliable water access without diesel costs, designed and installed by RayGrid."],
+  "institutional": ["Solar Power for Schools & Institutions | RayGrid", "Dependable solar power for schools, healthcare facilities and hospitality properties. Priority-load backup and phased installation options from RayGrid."],
+  "water-pumping": ["Solar Water Pumps for Boreholes & Livestock | RayGrid", "Solar water pumps for boreholes, livestock and water transfer, sized to your source yield and daily demand by RayGrid's design team."],
+  "water-heating": ["Solar Water Heating Systems | RayGrid", "Solar water heating systems for homes, hospitality and institutions. Reduce water heating costs with a system sized to your actual demand."],
+  "lighting-security": ["Solar Lighting & Security Systems | RayGrid", "Solar wall, garden, street and security lighting for compounds and public spaces. Self-contained, reliable lighting from RayGrid."],
+  "backup-hybrid": ["Backup & Hybrid Solar Energy Systems | RayGrid", "Backup and hybrid solar energy systems that keep essential loads running through grid outages. Battery and inverter sizing from RayGrid."]
 };
 
 SOLUTIONS.forEach(function(s){
-  const meta = SOLUTION_META[s.slug] || [s.name + " | Sun Power", s.short];
+  const meta = SOLUTION_META[s.slug] || [s.name + " | RayGrid", s.short];
   const crumbs = [["Home","/"],["Solutions","/solutions/"],[s.name,null]];
   generatedPaths.push(writePage('/solutions/'+s.slug+'/', meta[0], meta[1], pageSolutionDetail(s.slug),
     [faqSchema(s.faq), breadcrumbSchema(crumbs)].filter(Boolean)));
 });
 
-generatedPaths.push(writePage('/services/', 'Solar Consultation, Design, Installation & Support | Sun Power',
-  "From consultation and site survey to design, sourcing, installation and ongoing support — Sun Power's full solar service lifecycle, explained.",
+generatedPaths.push(writePage('/services/', 'Solar Consultation, Design, Installation & Support | RayGrid',
+  "From consultation and site survey to design, sourcing, installation and ongoing support — RayGrid's full solar service lifecycle, explained.",
   pageServices()));
 
-generatedPaths.push(writePage('/equipment/', 'Solar Equipment & Technologies | Sun Power',
-  "Solar panels, inverters, batteries, pumps, water heaters, lighting and protection equipment — sourced by Sun Power to match your system design.",
+generatedPaths.push(writePage('/equipment/', 'Solar Equipment & Technologies | RayGrid',
+  "Solar panels, inverters, batteries, pumps, water heaters, lighting and protection equipment — sourced by RayGrid to match your system design.",
   pageEquipment()));
 
-generatedPaths.push(writePage('/projects/', 'Completed Solar Projects | Sun Power',
-  "Completed solar and energy installations by Sun Power across residential, commercial, agricultural and institutional properties.",
+generatedPaths.push(writePage('/projects/', 'Completed Solar Projects | RayGrid',
+  "Completed solar and energy installations by RayGrid across residential, commercial, agricultural and institutional properties.",
   pageProjects()));
 
-generatedPaths.push(writePage('/about/', 'About Sun Power | Solar & Energy Solutions',
-  "Sun Power is a solar and energy solutions consultancy — design, sourcing, installation and support for homes, businesses, farms and institutions.",
+generatedPaths.push(writePage('/about/', 'About RayGrid | Solar & Energy Solutions',
+  "RayGrid is a solar and energy solutions consultancy — design, sourcing, installation and support for homes, businesses, farms and institutions.",
   pageAbout()));
 
-generatedPaths.push(writePage('/consultation/', 'Start a Solar Consultation | Sun Power',
-  "Start a solar consultation with Sun Power. Answer a few quick questions and connect directly via WhatsApp for a site assessment and quotation.",
+generatedPaths.push(writePage('/consultation/', 'Start a Solar Consultation | RayGrid',
+  "Start a solar consultation with RayGrid. Answer a few quick questions and connect directly via WhatsApp for a site assessment and quotation.",
   pageConsultation()));
 
 /* ============================================================

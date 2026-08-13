@@ -24,7 +24,7 @@ collections:
           - { label: "Address", name: "address", widget: "text" }
           - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
           - { label: "Hero Subheading", name: "heroSub", widget: "text" }
-          - label: "Why Sun Power — Cards"
+          - label: "Why RayGrid — Cards"
             name: "whyCards"
             widget: "list"
             fields:
@@ -38,7 +38,7 @@ collections:
             name: "brands"
             widget: "list"
             required: false
-            hint: "Leave empty until Sun Power confirms real brand relationships — the site shows a 'pending confirmation' placeholder when this is empty."
+            hint: "Leave empty until RayGrid confirms real brand relationships — the site shows a 'pending confirmation' placeholder when this is empty."
             fields:
               - { label: "Brand Name", name: "name", widget: "string" }
               - { label: "Logo", name: "logo", widget: "image", required: false }
@@ -64,7 +64,7 @@ collections:
                 options: ["home", "building", "tractor", "school", "droplet", "heat", "bulb", "battery", "shield", "wrench"]
               - { label: "The Challenge", name: "problem", widget: "text" }
               - { label: "Where This Applies", name: "application", widget: "text" }
-              - { label: "How Sun Power Designs This (steps)", name: "approach", widget: "list" }
+              - { label: "How RayGrid Designs This (steps)", name: "approach", widget: "list" }
               - label: "Typical Equipment Categories"
                 name: "equipment"
                 widget: "list"
