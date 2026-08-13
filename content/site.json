@@ -1,15 +1,44 @@
 {
-  "whatsappNumber": "000000000000",
-  "phoneDisplay": "+xxx xxx xxx xxx",
+  "whatsappNumber": "256779109266",
+  "phoneDisplay": "256779109266",
   "email": "info@sunpower.example",
   "address": "Address to be supplied by Sun Power",
   "heroHeadline": "Power Designed Around You.",
   "heroSub": "Professionally designed solar and energy systems for homes, businesses, farms and institutions — consulted, assessed, designed, sourced, installed and supported end to end.",
   "whyCards": [
-    { "title": "Expert Design", "icon": "design", "description": "Every system starts with a design built around your actual site and requirement — not a generic package." },
-    { "title": "Suitable Equipment Selection", "icon": "search", "description": "We source equipment matched to your design, application and budget, not whatever is easiest to sell." },
-    { "title": "Professional Installation", "icon": "truck", "description": "Installation and commissioning carried out by our technical team to the approved design specification." },
-    { "title": "Reliable Support", "icon": "headset", "description": "Maintenance, troubleshooting and upgrade support after installation — not a one-time transaction." }
+    {
+      "title": "Expert Design",
+      "icon": "design",
+      "description": "Every system starts with a design built around your actual site and requirement — not a generic package."
+    },
+    {
+      "title": "Suitable Equipment Selection",
+      "icon": "search",
+      "description": "We source equipment matched to your design, application and budget, not whatever is easiest to sell."
+    },
+    {
+      "title": "Professional Installation",
+      "icon": "truck",
+      "description": "Installation and commissioning carried out by our technical team to the approved design specification."
+    },
+    {
+      "title": "Reliable Support",
+      "icon": "headset",
+      "description": "Maintenance, troubleshooting and upgrade support after installation — not a one-time transaction."
+    }
   ],
-  "brands": []
+  "brands": [
+    {
+      "logo": "https://www.google.com/imgres?q=deye%20solar%20logo%20png&imgurl=https%3A%2F%2Fcdn.brandfetch.io%2Fid1S4ePXZy%2Fw%2F625%2Fh%2F625%2Ftheme%2Fdark%2Ficon.jpeg%3Fc%3D1bxid64Mup7aczewSAYMX%26t%3D1781709764817&imgrefurl=https%3A%2F%2Fbrandfetch.com%2Fdeyeinverter.com&docid=vXxXJKkM1RuXTM&tbnid=JV12uHqzCNIghM&vet=12ahUKEwiAgsu-gZ6WAxVmgv0HHTYmHRkQnPAOegQIMhAA..i&w=625&h=625&hcb=2&ved=2ahUKEwiAgsu-gZ6WAxVmgv0HHTYmHRkQnPAOegQIMhAA",
+      "name": "DEYE"
+    },
+    {
+      "logo": "https://www.google.com/imgres?q=JINKO%20solar%20logo%20png&imgurl=https%3A%2F%2Fcompanieslogo.com%2Fimg%2Forig%2FJKS_BIG-1262621a.png%3Ft%3D1720244492&imgrefurl=https%3A%2F%2Fcompanieslogo.com%2Fjinko-solar%2Flogo%2F&docid=aPSm9m2ts38R0M&tbnid=uaSsXx-Dvay21M&vet=12ahUKEwjvnZWIgp6WAxX99LsIHVCUO4gQnPAOegUIswEQAA..i&w=1513&h=505&hcb=2&ved=2ahUKEwjvnZWIgp6WAxX99LsIHVCUO4gQnPAOegUIswEQAA",
+      "name": "JINKO"
+    },
+    {
+      "logo": "https://www.google.com/imgres?q=LONGI%20solar%20logo%20png&imgurl=https%3A%2F%2Fwww.longi.com%2F_nuxt%2Fimg%2FseoLogo.1ecaaf1.png&imgrefurl=https%3A%2F%2Fwww.longi.com%2Fen%2F&docid=Sl3ReuZJraPRzM&tbnid=oiLBMhM7E2RiTM&vet=12ahUKEwia-tKmgp6WAxWv8LsIHTKNLU8QnPAOegUIuQEQAA..i&w=640&h=640&hcb=2&ved=2ahUKEwia-tKmgp6WAxWv8LsIHTKNLU8QnPAOegUIuQEQAA",
+      "name": "LONGI"
+    }
+  ]
 }
