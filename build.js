@@ -39,6 +39,7 @@ let SOLUTIONS = (readJSON('solutions.json', {items:[]}).items) || [];
 let SERVICES  = (readJSON('services.json',  {items:[]}).items) || [];
 let EQUIPMENT = (readJSON('equipment.json', {items:[]}).items) || [];
 let PROJECTS  = (readJSON('projects.json',  {items:[]}).items) || [];
+let LOCATIONS = (readJSON('locations.json', {items:[]}).items) || [];
 
 /* ============================================================
    TEMPLATE FUNCTIONS (pure — generated from the tested SPA build)
@@ -487,6 +488,53 @@ function pageProjects(){
 }
 
 /* ============================================================
+   PAGE: LOCATIONS (hub + detail)
+   ============================================================ */
+function pageLocations(){
+  return pageHeroBlock("pin","Where We Work", "Service Areas", "RayGrid serves clients across Uganda, with dedicated local focus in Kampala and Mukono. Don't see your area listed — reach out anyway, we cover a wider radius.", [["Home","/"],["Locations",null]]) +
+  '<section class="section">' +
+    '<div class="container">' +
+      '<div class="grid grid-3">' + LOCATIONS.map(function(loc){
+        return '<a class="card reveal" href="/locations/'+loc.slug+'/"><div class="icon-wrap">'+icon('pin')+'</div>'+
+          '<h3>'+loc.name+'</h3><p>'+loc.short+'</p><span class="card-link">Explore '+icon('arrow')+'</span></a>';
+      }).join('') + '</div>' +
+    '</div>' +
+  '</section>' +
+  '<section class="section on-navy corner-frame">' +
+    '<div class="container" style="text-align:center;">' +
+      '<h2>Not sure if we cover your area?</h2>' +
+      '<div style="margin-top:24px;"><a class="btn btn-primary" href="/consultation/">Start a Consultation '+icon('arrow')+'</a></div>' +
+    '</div>' +
+  '</section>';
+}
+
+function pageLocationDetail(slug){
+  const loc = LOCATIONS.find(function(x){return x.slug===slug;});
+  if(!loc) return page404();
+  return pageHeroBlock("pin", "Solar & Energy Solutions in "+loc.name, "Service Area", loc.short, [["Home","/"],["Locations","/locations/"],[loc.name,null]]) +
+  '<section class="section">' +
+    '<div class="container two-col">' +
+      '<div>' +
+        '<div class="reveal"><div class="eyebrow">Local Context</div><p style="margin-top:12px;font-size:1.05rem;color:var(--ink);">'+loc.context+'</p></div>' +
+        '<div class="reveal" style="margin-top:32px;"><div class="eyebrow">What We Help With in '+loc.name+'</div>' +
+          '<div class="chip-row" style="margin-top:14px;">' + equipTagsForSolutions(loc.focusSolutions) + '</div>' +
+        '</div>' +
+        '<div class="reveal" style="margin-top:40px;"><div class="eyebrow">Our Process</div><div style="margin-top:16px;background:var(--navy);border-radius:var(--radius-lg);padding:28px;">'+processRailHTML()+'</div></div>' +
+        (loc.faq && loc.faq.length ? '<div class="reveal" style="margin-top:40px;"><div class="eyebrow">Frequently Asked</div><div style="margin-top:10px;">'+faqHTML(loc.faq)+'</div></div>' : '') +
+      '</div>' +
+      '<div>' + ctaBlock("Ready to design your solution in "+loc.name+"?", "Start a short consultation and we will follow up with next steps for a site assessment.", "Hi RayGrid, I'm in "+loc.name+" and would like a solar consultation.") + '</div>' +
+    '</div>' +
+  '</section>';
+}
+function equipTagsForSolutions(slugs){
+  if(!slugs) return '';
+  return slugs.map(function(s){
+    const sol = SOLUTIONS.find(function(x){return x.slug===s;});
+    return sol ? '<a class="chip" href="/solutions/'+s+'/">'+sol.name+'</a>' : '';
+  }).join('');
+}
+
+/* ============================================================
    PAGE: ABOUT
    ============================================================ */
 function pageAbout(){
@@ -651,7 +699,7 @@ function renderHeader(activePath){
 }
 
 function renderFooter(){
-  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">RAY</span> <span class=\"power\">GRID</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by RayGrid</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 RayGrid Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
+  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">RAY</span> <span class=\"power\">GRID</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/locations/\">Service Areas</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by RayGrid</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 RayGrid Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
   const solutionLinks = SOLUTIONS.slice(0,6).map(function(s){
     return '<li><a href="/solutions/'+s.slug+'/">'+s.name+'</a></li>';
   }).join('') + '<li><a href="/solutions/">All Solutions</a></li>';
@@ -679,7 +727,8 @@ function localBusinessSchema(){
     "url": SITE_URL,
     "telephone": CONFIG.phoneDisplay,
     "email": CONFIG.email,
-    "address": CONFIG.address
+    "address": CONFIG.address,
+    "areaServed": LOCATIONS.map(function(l){ return l.name; }).concat(["Uganda"])
   };
 }
 function faqSchema(items){
@@ -1226,6 +1275,21 @@ generatedPaths.push(writePage('/equipment/', 'Solar Equipment & Technologies | R
 generatedPaths.push(writePage('/projects/', 'Completed Solar Projects | RayGrid',
   "Completed solar and energy installations by RayGrid across residential, commercial, agricultural and institutional properties.",
   pageProjects()));
+
+generatedPaths.push(writePage('/locations/', 'Solar Company Service Areas in Uganda | RayGrid',
+  "RayGrid provides solar and energy solutions across Uganda, with dedicated local service in Kampala and Mukono.",
+  pageLocations()));
+
+const LOCATION_META = {
+  "kampala": ["Solar Company in Kampala | RayGrid", "Solar power systems for homes, businesses and institutions in Kampala. Site assessment, design, sourcing, installation and support from RayGrid."],
+  "mukono": ["Solar Company in Mukono | RayGrid", "RayGrid is based in Mukono, Uganda, providing solar power systems for homes, businesses and institutions across the area."]
+};
+LOCATIONS.forEach(function(loc){
+  const meta = LOCATION_META[loc.slug] || ["Solar Company in "+loc.name+" | RayGrid", loc.short];
+  const crumbs = [["Home","/"],["Locations","/locations/"],[loc.name,null]];
+  generatedPaths.push(writePage('/locations/'+loc.slug+'/', meta[0], meta[1], pageLocationDetail(loc.slug),
+    [faqSchema(loc.faq), breadcrumbSchema(crumbs)].filter(Boolean)));
+});
 
 generatedPaths.push(writePage('/about/', 'About RayGrid | Solar & Energy Solutions',
   "RayGrid is a solar and energy solutions consultancy — design, sourcing, installation and support for homes, businesses, farms and institutions.",

@@ -118,6 +118,33 @@ collections:
               - { label: "Use Cases (tags)", name: "uses", widget: "list" }
               - { label: "Detail (shown when 'Explore' is clicked)", name: "detail", widget: "text" }
 
+  - name: "locations"
+    label: "Service Areas"
+    files:
+      - file: "content/locations.json"
+        label: "Locations"
+        name: "locations"
+        fields:
+          - name: "items"
+            label: "Locations"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "URL Slug", name: "slug", widget: "string", hint: "Used in the page link — avoid changing this on an existing location, it will break links pointing to it." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Short Description", name: "short", widget: "string" }
+              - { label: "Local Context (paragraph)", name: "context", widget: "text" }
+              - label: "Solutions to Highlight"
+                name: "focusSolutions"
+                widget: "list"
+                hint: "Use solution slugs: residential, commercial, agriculture, institutional, water-pumping, water-heating, lighting-security, backup-hybrid"
+              - label: "Frequently Asked Questions"
+                name: "faq"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }
+
   - name: "projects"
     label: "Projects"
     files:

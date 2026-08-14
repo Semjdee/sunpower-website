@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "slug": "kampala",
+      "name": "Kampala",
+      "short": "Solar power designed for Kampala's homes, businesses and grid realities.",
+      "context": "Kampala's mix of residential compounds, commercial buildings and busy business districts each draw power differently — and like much of the region, the city deals with periodic grid instability that makes backup and hybrid systems a genuinely practical choice, not a luxury. A site assessment in Kampala looks at roof type and orientation on denser plots, available space on commercial premises, and how a property actually uses power day to day.",
+      "focusSolutions": ["residential", "commercial", "backup-hybrid", "lighting-security"],
+      "faq": [
+        { "q": "Do you serve all areas of Kampala?", "a": "We cover Kampala and the surrounding metropolitan area. Share your specific location during consultation and we'll confirm quickly." },
+        { "q": "How soon can you schedule a site visit in Kampala?", "a": "Timelines depend on current bookings, but Kampala is a core part of our service area — reach out and we'll confirm the next available slot." }
+      ]
+    },
+    {
+      "slug": "mukono",
+      "name": "Mukono",
+      "short": "RayGrid is based in Mukono — solar solutions for homes, businesses and institutions across the area.",
+      "context": "Mukono is home to our own office, so it's where we know the ground conditions best — from town-centre commercial premises to residential compounds and institutions on the outskirts. Being based locally means site visits and follow-up support don't involve long turnaround times. Mukono's mix of urban and peri-urban properties also means solutions here range from straightforward residential rooftop systems to institutional and small agricultural setups.",
+      "focusSolutions": ["residential", "institutional", "commercial", "water-pumping"],
+      "faq": [
+        { "q": "Can I visit your office in Mukono?", "a": "Yes — reach out via WhatsApp or the consultation form to arrange a time." },
+        { "q": "Do you serve areas outside Mukono town?", "a": "Yes, we cover the surrounding area. Share your location during consultation and we'll confirm." }
+      ]
+    }
+  ]
+}
