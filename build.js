@@ -779,6 +779,13 @@ function wrapPage(opts){
 <meta property="og:description" content="${opts.description}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${canonical}">
+<meta property="og:image" content="${SITE_URL}/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${opts.title}">
+<meta name="twitter:description" content="${opts.description}">
+<meta name="twitter:image" content="${SITE_URL}/images/og-image.png">
 <meta name="google-site-verification" content="tpz2CDfNZUbP7K2tj_OGSaANZ2J5ESAEqsDT2qkqC7Q" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1239,7 +1246,7 @@ function writePage(routePath, title, description, bodyHtml, extraSchema){
 const generatedPaths = [];
 
 generatedPaths.push(writePage('/', 'RayGrid | Solar & Energy Solutions — Power Designed Around You',
-  "RayGrid designs, sources, installs and supports solar and energy systems for homes, businesses, farms and institutions. Power designed around your property, energy needs and budget.",
+  "Power Designed Around You. Solar & energy solutions for homes, businesses, farms and institutions across Uganda — from first consultation to lasting support.",
   pageHome()));
 
 generatedPaths.push(writePage('/solutions/', 'Solar & Energy Solutions by Application | RayGrid',
