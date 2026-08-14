@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 // TODO: update this once the real domain is purchased and connected.
-const SITE_URL = "https://leafy-donut-599229.netlify.app";
+const SITE_URL = "https://raygridsolarenergy.com";
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
