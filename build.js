@@ -730,6 +730,7 @@ function wrapPage(opts){
 <meta property="og:description" content="${opts.description}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${canonical}">
+<meta name="google-site-verification" content="tpz2CDfNZUbP7K2tj_OGSaANZ2J5ESAEqsDT2qkqC7Q" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
