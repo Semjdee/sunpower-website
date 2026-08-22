@@ -686,7 +686,7 @@ function pageConsultation(){
    SHARED HEADER / FOOTER (build-time, with active-nav baked in)
    ============================================================ */
 function renderHeader(activePath){
-  let html = "<header class=\"site\">\n  <div class=\"container header-inner\">\n    <a href=\"/\" class=\"brand\" aria-label=\"RayGrid home\">\n      <img class=\"brand-mark\" src=\"/images/raygrid-emblem.png\" alt=\"RayGrid emblem\" width=\"34\" height=\"34\">\n      <span>\n        <span class=\"brand-word\"><span class=\"sun\">RAY</span> <span class=\"power\">GRID</span></span>\n        <span class=\"brand-sub\">Solar &amp; Energy Solutions</span>\n      </span>\n    </a>\n\n    <nav class=\"primary\" id=\"primaryNav\" aria-label=\"Primary\">\n      <a href=\"/\" data-path=\"/\">Home</a>\n      <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n      <a href=\"/services/\" data-path=\"/services\">Services</a>\n      <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n      <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n      <a href=\"/about/\" data-path=\"/about\">About</a>\n      <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n    </nav>\n\n    <div class=\"header-actions\">\n      <a class=\"btn btn-outline btn-sm\" href=\"/consultation/\">Request Assessment</a>\n      <a class=\"btn btn-wa btn-sm\" id=\"headerWaBtn\" target=\"_blank\" rel=\"noopener\">\n        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n        WhatsApp Us\n      </a>\n      <button class=\"menu-toggle\" id=\"menuToggle\" aria-label=\"Toggle menu\" aria-expanded=\"false\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M3 6h18M3 12h18M3 18h18\"/></svg>\n      </button>\n    </div>\n  </div>\n  <div class=\"mobile-menu\" id=\"mobileMenu\">\n    <a href=\"/\" data-path=\"/\">Home</a>\n    <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n    <a href=\"/services/\" data-path=\"/services\">Services</a>\n    <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n    <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n    <a href=\"/about/\" data-path=\"/about\">About</a>\n    <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n  </div>\n</header>";
+  let html = "<header class=\"site\">\n  <div class=\"container header-inner\">\n    <a href=\"/\" class=\"brand\" aria-label=\"RayGrid home\">\n      <img class=\"brand-mark\" src=\"/images/raygrid-emblem.png\" alt=\"RayGrid emblem\" width=\"52\" height=\"52\">\n      <span>\n        <span class=\"brand-word\"><span class=\"sun\">RAY</span> <span class=\"power\">GRID</span></span>\n        <span class=\"brand-sub\">Solar &amp; Energy Solutions</span>\n      </span>\n    </a>\n\n    <nav class=\"primary\" id=\"primaryNav\" aria-label=\"Primary\">\n      <a href=\"/\" data-path=\"/\">Home</a>\n      <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n      <a href=\"/services/\" data-path=\"/services\">Services</a>\n      <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n      <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n      <a href=\"/about/\" data-path=\"/about\">About</a>\n      <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n    </nav>\n\n    <div class=\"header-actions\">\n      <a class=\"btn btn-outline btn-sm\" href=\"/consultation/\">Request Assessment</a>\n      <a class=\"btn btn-wa btn-sm\" id=\"headerWaBtn\" target=\"_blank\" rel=\"noopener\">\n        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n        WhatsApp Us\n      </a>\n      <button class=\"menu-toggle\" id=\"menuToggle\" aria-label=\"Toggle menu\" aria-expanded=\"false\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M3 6h18M3 12h18M3 18h18\"/></svg>\n      </button>\n    </div>\n  </div>\n  <div class=\"mobile-menu\" id=\"mobileMenu\">\n    <a href=\"/\" data-path=\"/\">Home</a>\n    <a href=\"/solutions/\" data-path=\"/solutions\">Solutions</a>\n    <a href=\"/services/\" data-path=\"/services\">Services</a>\n    <a href=\"/equipment/\" data-path=\"/equipment\">Equipment</a>\n    <a href=\"/projects/\" data-path=\"/projects\">Projects</a>\n    <a href=\"/about/\" data-path=\"/about\">About</a>\n    <a href=\"/consultation/\" data-path=\"/consultation\">Consultation</a>\n  </div>\n</header>";
   const navPaths = ["/", "/solutions/", "/services/", "/equipment/", "/projects/", "/about/", "/consultation/"];
   navPaths.forEach(function(p){
     const isActive = (p === "/") ? (activePath === "/") : activePath.indexOf(p) === 0;
@@ -699,7 +699,7 @@ function renderHeader(activePath){
 }
 
 function renderFooter(){
-  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">RAY</span> <span class=\"power\">GRID</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/locations/\">Service Areas</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by RayGrid</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 RayGrid Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
+  let html = "<footer class=\"site\">\n  <div class=\"container\">\n    <div class=\"footer-grid\">\n      <div class=\"footer-brand\">\n        <img class=\"footer-mark\" src=\"/images/raygrid-emblem.png\" alt=\"RayGrid emblem\" width=\"64\" height=\"64\">\n        <span class=\"brand-word\"><span style=\"color:#fff\">RAY</span> <span class=\"power\">GRID</span></span>\n        <p>We design, source, install and support complete solar and energy systems for homes, businesses, farms and institutions \u2014 around your property, your requirement and your budget.</p>\n        <div class=\"op-line\" style=\"margin-top:16px;\">\n          <span>DESIGN</span><span class=\"dot\"></span><span>INSTALL</span><span class=\"dot\"></span><span>SUPPORT</span>\n        </div>\n      </div>\n      <div>\n        <h4>Solutions</h4>\n        <ul id=\"footerSolutions\"></ul>\n      </div>\n      <div>\n        <h4>Company</h4>\n        <ul>\n          <li><a href=\"/services/\">Services</a></li>\n          <li><a href=\"/equipment/\">Equipment</a></li>\n          <li><a href=\"/projects/\">Projects</a></li>\n          <li><a href=\"/locations/\">Service Areas</a></li>\n          <li><a href=\"/about/\">About</a></li>\n          <li><a href=\"/consultation/\">Consultation</a></li>\n        </ul>\n      </div>\n      <div>\n        <h4>Contact</h4>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z\"/></svg>\n          <span>Phone<br><em id=\"footerPhone\" style=\"color:#6B7A93;font-style:normal;\">+xxx xxx xxx xxx</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 4h16v16H4z\" opacity=\"0\"/><path d=\"M22 6 12 13 2 6\"/><path d=\"M2 6h20v12H2z\"/></svg>\n          <span>Email<br><em id=\"footerEmail\" style=\"color:#6B7A93;font-style:normal;\">info@sunpower.example</em></span>\n        </div>\n        <div class=\"contact-line\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>\n          <span id=\"footerAddress\">Address to be supplied by RayGrid</span>\n        </div>\n        <a class=\"btn btn-wa btn-sm\" style=\"margin-top:6px;\" id=\"footerWaBtn\" target=\"_blank\" rel=\"noopener\">\n          <svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.4 1.9-1.2 2.1-1.8.2-.5.2-.9.1-1-.1-.1-.3-.2-.6-.3z\"/><path d=\"M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z\"/></svg>\n          Chat on WhatsApp\n        </a>\n      </div>\n    </div>\n    <div class=\"footer-note\">\n      <span>\u00a9 2026 RayGrid Solar &amp; Energy Solutions. Prototype build \u2014 legal name, registration and social links pending.</span>\n      <span>Contact details shown are placeholders pending confirmation.</span>\n    </div>\n  </div>\n</footer>";
   const solutionLinks = SOLUTIONS.slice(0,6).map(function(s){
     return '<li><a href="/solutions/'+s.slug+'/">'+s.name+'</a></li>';
   }).join('') + '<li><a href="/solutions/">All Solutions</a></li>';
@@ -828,7 +828,7 @@ ${jsonLdBlocks}
   --font-display:'Space Grotesk',sans-serif;
   --font-body:'Inter',sans-serif;
   --font-mono:'IBM Plex Mono',monospace;
-  --shadow-card: 0 1px 2px rgba(11,20,32,0.06), 0 8px 24px -12px rgba(11,20,32,0.12);
+  --shadow-card: 0 2px 5px rgba(11,20,32,0.04), 0 16px 40px -20px rgba(11,20,32,0.10);
   --shadow-lift: 0 12px 32px -14px rgba(11,20,32,0.28);
 }
 *,*::before,*::after{box-sizing:border-box;}
@@ -879,8 +879,8 @@ input,select,textarea{font-family:inherit;font-size:1rem;}
 .eyebrow.on-dark{color:var(--yellow-soft);}
 .eyebrow.on-dark::before{background:var(--yellow);}
 
-.section{padding:88px 0;}
-.section.tight{padding:64px 0;}
+.section{padding:104px 0;}
+.section.tight{padding:72px 0;}
 @media (max-width:800px){.section{padding:60px 0;} .section.tight{padding:44px 0;}}
 .section.on-off{background:var(--off);}
 .section.on-navy{background:var(--navy);color:var(--white);}
@@ -921,13 +921,14 @@ input,select,textarea{font-family:inherit;font-size:1rem;}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:999;border-radius:0 0 4px 0;}
 .skip-link:focus{left:0;}
 header.site{
-  position:sticky;top:0;z-index:80;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:80;background:rgba(255,255,255,0.82);backdrop-filter:blur(18px) saturate(160%);
   border-bottom:1px solid var(--line);
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px;}
 .brand{display:flex;align-items:center;gap:10px;}
-.brand-mark{width:34px;height:34px;flex:none;}
-.brand-word{font-family:var(--font-display);font-weight:700;font-size:1.18rem;letter-spacing:-0.01em;line-height:1;}
+.brand-mark{width:52px;height:52px;flex:none;}
+.brand-word{font-family:var(--font-display);font-weight:700;font-size:1.34rem;letter-spacing:-0.01em;line-height:1;}
+.footer-mark{margin-bottom:14px;}
 .brand-word .sun{color:var(--navy);}
 .brand-word .power{color:var(--yellow-deep);}
 .brand-sub{display:block;font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.12em;color:var(--muted);margin-top:2px;text-transform:uppercase;}
@@ -968,8 +969,8 @@ nav.primary a.active{color:var(--blue-deep);font-weight:600;}
 .hero-grid{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(46,111,242,0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(46,111,242,0.12) 1px, transparent 1px);
+    linear-gradient(rgba(46,111,242,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,111,242,0.07) 1px, transparent 1px);
   background-size:42px 42px;
   mask-image:linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 85%);
   pointer-events:none;
@@ -1017,7 +1018,7 @@ nav.primary a.active{color:var(--blue-deep);font-weight:600;}
     linear-gradient(to bottom, var(--blue) 2px, transparent 2px) bottom right / 2px 14px no-repeat;
   opacity:0.55;
 }
-.corner-frame.on-light::before{opacity:0.9;}
+.corner-frame.on-light::before{opacity:0.6;}
 
 /* ---------- Cards ---------- */
 .grid{display:grid;gap:20px;}
@@ -1029,9 +1030,9 @@ nav.primary a.active{color:var(--blue-deep);font-weight:600;}
 
 .card{
   background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);
-  padding:26px;transition:box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+  padding:30px;transition:box-shadow .2s ease, transform .2s ease, border-color .2s ease;
 }
-.card:hover{box-shadow:var(--shadow-card);transform:translateY(-2px);border-color:#D6DCE5;}
+.card:hover{box-shadow:var(--shadow-card);transform:translateY(-3px);border-color:#D6DCE5;}
 .card .icon-wrap{
   width:44px;height:44px;border-radius:var(--radius);background:var(--blue-soft);
   display:flex;align-items:center;justify-content:center;color:var(--blue-deep);margin-bottom:16px;
@@ -1246,7 +1247,7 @@ function writePage(routePath, title, description, bodyHtml, extraSchema){
 const generatedPaths = [];
 
 generatedPaths.push(writePage('/', 'RayGrid | Solar & Energy Solutions — Power Designed Around You',
-  "Power Designed Around You. Solar & energy solutions for homes, businesses, farms and institutions across Uganda — from first consultation to lasting support.",
+  "RayGrid — specialists in solar assessments and installations. Power designed around you for homes, businesses, farms and institutions across Uganda.",
   pageHome()));
 
 generatedPaths.push(writePage('/solutions/', 'Solar & Energy Solutions by Application | RayGrid',
