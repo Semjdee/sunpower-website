@@ -1,40 +1,88 @@
 {
   "items": [
     {
-      "title": "Rooftop residential system",
-      "category": "Residential",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
-    },
-    {
-      "title": "Commercial roof-mount array",
+      "title": "Commercial Rooftop Solar Installation",
       "category": "Commercial",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
+      "image": "/images/uploads/project-commercial-rooftop-01.jpg",
+      "description": "Large-scale rooftop solar array installed on a commercial building."
     },
     {
-      "title": "Borehole solar pumping",
-      "category": "Agriculture",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
+      "title": "Commercial Solar Installation — Mounting Detail",
+      "category": "Commercial",
+      "image": "/images/uploads/project-commercial-rooftop-detail-01.jpg",
+      "description": "Close-up view of panel mounting and cable management on a commercial rooftop array."
     },
     {
-      "title": "School backup power system",
+      "title": "Commercial Battery Storage Installation",
+      "category": "Backup & Hybrid",
+      "image": "/images/uploads/project-battery-storage-01.jpg",
+      "description": "Inverter and battery storage setup providing backup power for a commercial site."
+    },
+    {
+      "title": "Institutional Rooftop Solar Installation",
       "category": "Institutional",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
+      "image": "/images/uploads/project-institutional-rooftop-01.jpg",
+      "description": "Rooftop solar array installed on an institutional building."
     },
     {
-      "title": "Hospitality water heating",
-      "category": "Water Heating",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
+      "title": "Institutional Solar Installation — Rooftop View",
+      "category": "Institutional",
+      "image": "/images/uploads/project-institutional-rooftop-02.jpg",
+      "description": "Additional view of a rooftop solar array on an institutional property."
     },
     {
-      "title": "Compound security lighting",
+      "title": "Commercial Solar Installation — Cabling in Progress",
+      "category": "Commercial",
+      "image": "/images/uploads/project-commercial-cabling-01.jpg",
+      "description": "Technical team running cabling during a commercial rooftop installation."
+    },
+    {
+      "title": "Commercial Rooftop Solar Installation",
+      "category": "Commercial",
+      "image": "/images/uploads/project-commercial-rooftop-02.jpg",
+      "description": "Final inspection on a completed commercial rooftop solar array."
+    },
+    {
+      "title": "Large-Scale Solar Installation — Site Logistics",
+      "category": "Commercial",
+      "image": "/images/uploads/project-logistics-01.jpg",
+      "description": "Mounting materials and components staged for a large commercial installation."
+    },
+    {
+      "title": "Commercial Solar Installation",
+      "category": "Commercial",
+      "image": "/images/uploads/project-commercial-rooftop-03.jpg",
+      "description": "Rooftop solar array installed across a large commercial roof."
+    },
+    {
+      "title": "Solar Installation — Materials & Equipment",
+      "category": "Commercial",
+      "image": "/images/uploads/project-logistics-02.jpg",
+      "description": "Mounting rails and equipment staged ahead of installation."
+    },
+    {
+      "title": "Large Commercial Solar Installation — Inverter Room",
+      "category": "Commercial",
+      "image": "/images/uploads/project-inverter-room-01.jpg",
+      "description": "Multi-inverter setup for a large-scale commercial solar system."
+    },
+    {
+      "title": "Solar Security Lighting Installation",
       "category": "Lighting",
-      "image": "",
-      "description": "Awaiting RayGrid project photography and details."
+      "image": "/images/uploads/project-lighting-01.jpg",
+      "description": "All-in-one solar street light installed at a residential property."
+    },
+    {
+      "title": "Residential Battery Backup Installation",
+      "category": "Residential",
+      "image": "/images/uploads/project-residential-battery-01.jpg",
+      "description": "Inverter and battery storage system installed for residential backup power."
+    },
+    {
+      "title": "Industrial Rooftop Solar Installation",
+      "category": "Commercial",
+      "image": "/images/uploads/project-industrial-rooftop-01.jpg",
+      "description": "Extensive rooftop solar array installed at an industrial facility."
     }
   ]
 }
